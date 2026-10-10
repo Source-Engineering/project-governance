@@ -13,11 +13,11 @@
 **Goal:** Establish the discipline on GitHub and Kanban. Land a working repo with manifesto, reframed architecture, pillar stubs, license, and contributing guide.
 
 **Done when:**
-- Repo `emmanuel-a-otchere/source-engineering` exists, is public, has README, MANIFESTO, ROADMAP, four-layer-stack.md, pillar sub-folder stubs, LICENSE (Apache-2.0), CONTRIBUTING, .github/README.md
+- `Source-Engineering/source-engineering` is public and has the canonical artifacts (README, MANIFESTO, ROADMAP, four-layer-stack.md, pillar sub-folder stubs, LICENSE (Apache-2.0), CONTRIBUTING, .github/README.md)
 - The README links both source essays and is the canonical landing page for the discipline
 - The repo is linked to a dedicated Source Engineering Kanboard project via a project card
 - GitHub Project board exists with WBS epic issues (Pillars / Architecture / Reference Implementation / Validation Domains)
-- Initial commit on `main`; no history to rewrite
+- The slice lives on `main`
 
 **Status:** in flight.
 

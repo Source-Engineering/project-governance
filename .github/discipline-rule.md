@@ -12,8 +12,7 @@ Every actionable item that arises on the Source Engineering Discord channel (par
 - **Parent channel:** 1526858674822185010
 - **GitHub repo:** https://github.com/Source-Engineering/source-engineering
 - **Kanboard project:** http://192.168.50.160:7000/board/13 (project id 13, columns 52 Backlog / 53 Ready / 54 WIP / 55 Done)
-- **Snapshot doc:** /home/hermes/.hermes/profiles/coder/kanban/se-kanban-snapshot-2026-10-10.md
-- **Skill:** source-engineering-kanban-discipline (mirrors the ECM and nuel.otchere-com skills)
+- **Skill:** source-engineering-kanban-discipline
 
 ## Scope lock
 
@@ -43,7 +42,7 @@ Every card description carries:
 - Adjacent card refs: the umbrella card id for the workstream
 - The board URL: http://192.168.50.160:7000/board/13
 
-## Tag set (project-scoped, established 2026-10-10)
+## Tag set (project-scoped)
 
 - discipline
 - framework
@@ -60,11 +59,11 @@ When this Discord channel hosts recurring check-ins for the discipline, each rec
 
 ## KB API credentials (record only - never commit live values)
 
-The Kanboard REST API at `http://192.168.50.160:7000` is reached via JSON-RPC. The agent profile-level credentials at `~/.hermes/profiles/coder/keys.env` hold `GITHUB_TOKEN`; KB auth is the standard admin/admin form credentials used across the LAN. **Never commit KB credentials to this file.**
+The Kanboard REST API at `http://192.168.50.160:7000` is reached via JSON-RPC. The profile-level credentials at `~/.profile/keys.env` hold `GITHUB_TOKEN`; KB auth is the standard admin/admin form credentials used across the LAN. **Never commit KB credentials to this file.**
 
 ## Audit and reflection
 
-When a Source Engineering slice completes, the agent reflects in the snapshot doc:
+When a Source Engineering slice completes, a reflection lands in the snapshot doc:
 
 - What shipped
 - What fell short
@@ -72,8 +71,3 @@ When a Source Engineering slice completes, the agent reflects in the snapshot do
 - Which new open question got opened
 
 The discipline grows by closing questions, not by accumulating epics.
-
-## Edit history
-
-- 2026-10-10: Initial rule captured on discipline landing (Slice 0).
-- 2026-10-10: Updated to reflect org transfer from emmanuel-a-otchere/source-engineering to Source-Engineering/source-engineering; Kanboard project id 13; current thread 1558169004336742480.
