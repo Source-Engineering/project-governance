@@ -79,7 +79,17 @@ Pillar folders and `framework/`, `tools/` directories are populated incrementall
 
 ## Status
 
-This is a **scaffold slice**. The repository contains the discipline statement, the reframed architecture, pillar stubs, and the governance surface. No production code yet  -  that lands in subsequent slices per the roadmap.
+This is a **scaffold slice**. The repository contains the discipline statement, the reframed architecture, pillar stubs, and the governance surface. No production code yet; that lands in subsequent slices per the roadmap.
+
+## Kanban and channel discipline
+
+Work for this discipline is tracked on a dedicated Kanboard project: **http://192.168.50.160:7000/board/13** (project id 13, columns 52 Backlog / 53 Ready / 54 Work in progress / 55 Done). Every action on the discipline's Discord channel produces a kanban card, with column state matching the lifecycle, autonomously. See:
+
+- `.github/discipline-rule.md` for the per-channel rule
+- `context/AGENT-DOCTRINE.md` for the per-repo agent doctrine
+- `/home/hermes/.hermes/profiles/coder/kanban/se-kanban-snapshot-2026-10-10.md` for the snapshot doc
+
+The current 10 open cards are seeded against this repo.
 
 ## License
 

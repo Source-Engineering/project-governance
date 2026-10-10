@@ -4,15 +4,16 @@ This file is the per-channel discipline rule for the Source Engineering discipli
 
 ## Rule
 
-Every actionable item that arises on the Discord thread `CodingAgent / #source-engineering` (parent channel 1526858674822185010, this thread) **must produce a Kanboard card** on the Source Engineering Kanboard project, with column state matching the item's lifecycle. The rule runs autonomously without prompting.
+Every actionable item that arises on the Source Engineering Discord channel (parent channel 1526858674822185010) **must produce a Kanboard card** on the Source Engineering Kanboard project (id 13 on `http://192.168.50.160:7000`), with column state matching the item's lifecycle. The rule runs autonomously without prompting.
 
 ## Channel binding
 
 - **Guild:** 1496909480783249428
 - **Parent channel:** 1526858674822185010
-- **Discord source thread:** 1558168902519890112
-- **GitHub repo:** https://github.com/emmanuel-a-otchere/source-engineering
-- **GitHub Project:** https://github.com/users/emmanuel-a-otchere/projects/12
+- **GitHub repo:** https://github.com/Source-Engineering/source-engineering
+- **Kanboard project:** http://192.168.50.160:7000/board/13 (project id 13, columns 52 Backlog / 53 Ready / 54 WIP / 55 Done)
+- **Snapshot doc:** /home/hermes/.hermes/profiles/coder/kanban/se-kanban-snapshot-2026-10-10.md
+- **Skill:** source-engineering-kanban-discipline (mirrors the ECM and nuel.otchere-com skills)
 
 ## Scope lock
 
@@ -22,39 +23,48 @@ Cross-cutting references (ECF framework, OpenDEAM vocabulary, ECM canon) remain 
 
 ## Column states
 
-| Column   | When an item lands here                                    |
-|----------|------------------------------------------------------------|
-| Backlog  | identified but not yet sized, no owner picked              |
-| Ready    | sized and accepted, owner assigned, no in-flight work      |
-| In Progress | an active worker is on it                                |
-| In Review | a deliverable exists and is under review                   |
-| Done     | the deliverable is shipped and accepted                    |
-| Blocked  | the worker is stuck and waiting for human input             |
+| Column      | When an item lands here                                    |
+|-------------|------------------------------------------------------------|
+| Backlog     | identified but not yet sized, no owner picked              |
+| Ready       | sized and accepted, owner assigned, no in-flight work      |
+| WIP         | an active worker is on it                                  |
+| Done        | the deliverable is shipped and accepted                    |
+| Blocked     | the worker is stuck and waiting for human input            |
 
-## GitHub mirror
+Kanboard 4-column standard (Backlog/Ready/Work in progress/Done). Mapping to the in-skill terminology above is column-name-aware.
 
-In addition to Kanboard, each card is mirrored as a GitHub Project v2 item on `users/emmanuel-a-otchere/projects/12`. The card carries:
+## Card content
 
-- the matching `Stage` field (Backlog / Ready / In Progress / In Review / Done / Blocked)
-- a `Priority` field (P0 / P1 / P2 / P3)
-- a backlink to the repo issue that originated it
+Every card description carries:
+
+- Origin Discord thread id (e.g. 1558169004336742480) and message id where applicable
+- The repo path: https://github.com/Source-Engineering/source-engineering/<path>
+- Commit SHAs (7-char) for any commit the card references
+- Adjacent card refs: the umbrella card id for the workstream
+- The board URL: http://192.168.50.160:7000/board/13
+
+## Tag set (project-scoped, established 2026-10-10)
+
+- discipline
+- framework
+- blueprint
+- tool
+- example
+- pillar-1 ... pillar-5
+- layer-1 ... layer-4
+- blog-anchor
 
 ## Recurring threads
 
-When this Discord channel hosts recurring check-ins (e.g. weekly or daily standups for the discipline), each recurring thread produces one parent card and N sub-tasks on the Kanboard project, with `parents=[parent_id]` gating the sub-tasks.
+When this Discord channel hosts recurring check-ins for the discipline, each recurring thread produces one parent card and N sub-tasks on the Kanboard project, with parents= links to the parent id.
 
 ## KB API credentials (record only - never commit live values)
 
-The Kanboard REST API at `http://192.168.50.160:7000` requires either a session token or a personal API token. **Never commit the value to this file.** When the rule runs, the worker reads from the profile-level env (`~/.hermes/profiles/coder/.env`) under the names:
+The Kanboard REST API at `http://192.168.50.160:7000` is reached via JSON-RPC. The agent profile-level credentials at `~/.hermes/profiles/coder/keys.env` hold `GITHUB_TOKEN`; KB auth is the standard admin/admin form credentials used across the LAN. **Never commit KB credentials to this file.**
 
-- `KB_URL` - base URL (default `http://192.168.50.160:7000`)
-- `KB_USER` - either a username or a personal API token (preferred over basic auth)
+## Audit and reflection
 
-If those env entries are absent, the worker stops and asks the operator rather than guessing.
-
-## Audit + reflection
-
-When a Source Engineering slice completes, the agent reflects in `MEMORY.md`:
+When a Source Engineering slice completes, the agent reflects in the snapshot doc:
 
 - What shipped
 - What fell short
@@ -66,3 +76,4 @@ The discipline grows by closing questions, not by accumulating epics.
 ## Edit history
 
 - 2026-10-10: Initial rule captured on discipline landing (Slice 0).
+- 2026-10-10: Updated to reflect org transfer from emmanuel-a-otchere/source-engineering to Source-Engineering/source-engineering; Kanboard project id 13; current thread 1558169004336742480.
