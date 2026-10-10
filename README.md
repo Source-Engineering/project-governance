@@ -39,6 +39,8 @@ The five pillars of the 2025 essay compose into a shippable stack. Each pillar b
 
 The detailed layer-by-layer specification lives in [`docs/architecture/four-layer-stack.md`](docs/architecture/four-layer-stack.md). See [`docs/pillars/`](docs/pillars) for the per-pillar evolution from the 2025 framing.
 
+The canonical manifesto lives at [`docs/00-manifesto.md`](docs/00-manifesto.md); the explicit positioning against adjacent disciplines lives at [`docs/05-positioning.md`](docs/05-positioning.md).
+
 ## The five pillars  -  what they became
 
 | Pillar (2025)                               | 2026 form                                    | Now lives in         |
@@ -55,7 +57,7 @@ The detailed layer-by-layer specification lives in [`docs/architecture/four-laye
 source-engineering/
 ├── README.md                        -  this file
 ├── ROADMAP.md                       -  phased plan, slice-by-slice
-├── MANIFESTO.md                     -  the discipline in full prose
+├── MANIFESTO.md                     -  deprecated; superseded by docs/00-manifesto.md
 ├── CONTRIBUTING.md                  -  how to engage with the work
 ├── LICENSE                          -  Apache-2.0
 ├── docs/
