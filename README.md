@@ -1,93 +1,79 @@
-# Source Engineering
+# Source Engineering -- Project Governance
 
-> A discipline for grounding AI-based decisions with integrity.
+> The governance home for the Source Engineering discipline.
 
-Source Engineering is the practice of building **chains of orchestrable and traceable sources** (COTS) so a model's reasoning can be examined end-to-end  -  not merely trusted on the model's say-so. This repository is the working home for the discipline: its framework, its reference architecture, and the tools that grow around it.
+This repository governs how the Source Engineering discipline evolves. It hosts the change process, the per-channel kanban discipline rule, the ROADMAP, the WBS epics, and the canonical pointer to the discipline's intellectual home.
 
-The concept was introduced in the December 2025 essay [Source Engineering: Grounding AI-based Decisions with Integrity](https://nuel.otchere.com/posts/2025/12/source-engineering-grounding-ai-based-decisions-with-integrity.html) and reframed one year later in [Reframing the Five Pillars, One Year Later](https://nuel.otchere.com/posts/2026/10/reframing-the-five-pillars-one-year-later.html).
+The discipline is published across an organisation of repositories, one authoritative home per artefact. This repo is the governance home; the other repos own specific artefacts.
 
-## The thesis
+## The discipline
 
-AI models in 2026 can produce structurally valid answers that are the wrong answers for the business. The hesitation factor  -  the gap between "the model answered" and "I can act on the answer"  -  has shrunk at the model layer but remains open at the **judgment layer**. Source Engineering exists to close that gap by turning decisions into auditable artifacts.
+Source Engineering is the practice of building **chains of orchestrable and traceable sources** (COTS) so a model's reasoning can be examined end-to-end; not merely trusted on the model's say-so. The discipline is grounded in two essays:
 
-The discipline stands on three load-bearing claims:
+- [Source Engineering: Grounding AI-based Decisions with Integrity (December 2025)](https://nuel.otchere.com/posts/2025/12/source-engineering-grounding-ai-based-decisions-with-integrity.html)
+- [Reframing the Five Pillars, One Year Later (October 2026)](https://nuel.otchere.com/posts/2026/10/reframing-the-five-pillars-one-year-later.html)
 
-1. **Provenance is a property of the response, not an afterthought.** Every input that shaped an output is logged, surfaced, and reproducible.
-2. **Context is a runtime signal, not a hidden prompt.** Context engineering parameters are first-class data points back to the user, not just knobs for the model operator.
-3. **Judgment is separate from evidence.** A decision that fits every declared option can still be the wrong decision for the situation. The evidence chain proves *what*; the judgment layer decides *whether*.
+The discipline overview, organisation map, and public introduction live at the org profile: https://github.com/Source-Engineering.
 
-## The four-layer stack (2026 reframing)
-
-The five pillars of the 2025 essay compose into a shippable stack. Each pillar becomes a layer; each layer has an interface; the layers stack.
+## The four-layer stack
 
 ```
 +--------------------------------------------------+
-|  Layer 4  -  Audit Trail                           |
-|  (who saw what, when, and with what evidence)    |
+|  Layer 4  --  Audit Trail                          |
+|  (who saw what, when, and with what evidence)     |
 +--------------------------------------------------+
-|  Layer 3  -  Business Guardrails                   |
-|  (policy, compliance, jurisdictional rules)      |
+|  Layer 3  --  Business Guardrails                  |
+|  (policy, compliance, jurisdictional rules)       |
 +--------------------------------------------------+
-|  Layer 2  -  Runtime Validation                    |
-|  (calibration, drift, segment-aware signals)     |
+|  Layer 2  --  Runtime Validation                   |
+|  (calibration, drift, segment-aware signals)      |
 +--------------------------------------------------+
-|  Layer 1  -  Typed Model                           |
-|  (typed questions, declared answer shapes,       |
-|   calibrated probabilities)                      |
+|  Layer 1  --  Typed Model                          |
+|  (typed questions, declared answer shapes,        |
+|   calibrated probabilities)                       |
 +--------------------------------------------------+
 ```
 
-The detailed layer-by-layer specification lives in [`docs/architecture/four-layer-stack.md`](docs/architecture/four-layer-stack.md). See [`docs/pillars/`](docs/pillars) for the per-pillar evolution from the 2025 framing.
+## Organisation of the discipline
 
-The canonical manifesto lives at [`docs/00-manifesto.md`](docs/00-manifesto.md); the explicit positioning against adjacent disciplines lives at [`docs/05-positioning.md`](docs/05-positioning.md).
+The discipline is published as a set of repositories under the `Source-Engineering` GitHub organisation. Each repository owns a specific artefact. The full map:
 
-## The five pillars  -  what they became
+| Repo | Owns |
+|---|---|
+| [Source-Engineering/.github](https://github.com/Source-Engineering/.github) | Org profile README that renders on the org homepage |
+| [Source-Engineering/project-governance](https://github.com/Source-Engineering/project-governance) (this repo) | Change process, ADRs, RFCs, maintainer responsibilities, release policy |
+| [Source-Engineering/source-engineering-foundations](https://github.com/Source-Engineering/source-engineering-foundations) | Discipline definition, principles, terminology, scope and non-goals |
+| [Source-Engineering/source-engineering-research](https://github.com/Source-Engineering/source-engineering-research) | Research agenda, hypotheses, experimental protocols, evaluation reports |
+| [Source-Engineering/source-engineering-model](https://github.com/Source-Engineering/source-engineering-model) | Canonical conceptual and data model |
+| [Source-Engineering/source-engineering-specifications](https://github.com/Source-Engineering/source-engineering-specifications) | Normative technical requirements. COTS spec lives under `specifications/cots/` |
+| [Source-Engineering/source-engineering-architecture](https://github.com/Source-Engineering/source-engineering-architecture) | Reference architecture, blueprint stack, per-layer interface contracts |
+| [Source-Engineering/source-engineering-reference-implementation](https://github.com/Source-Engineering/source-engineering-reference-implementation) | Working reference code that demonstrates the spec in action |
+| [Source-Engineering/source-engineering-conformance](https://github.com/Source-Engineering/source-engineering-conformance) | Conformance test suite, validation harness, badge system |
+| [Source-Engineering/source-engineering-tools](https://github.com/Source-Engineering/source-engineering-tools) | Reusable software utilities: CLI, visualizer, model-card-gen, SDKs |
+| [Source-Engineering/source-engineering-case-studies](https://github.com/Source-Engineering/source-engineering-case-studies) | Evaluated demonstrations, case studies |
+| [Source-Engineering/source-engineering-practice](https://github.com/Source-Engineering/source-engineering-practice) | Practitioner guidance, implementation guides |
+| [Source-Engineering/source-engineering-education](https://github.com/Source-Engineering/source-engineering-education) | Curriculum and learning resources |
 
-| Pillar (2025)                               | 2026 form                                    | Now lives in         |
-|---------------------------------------------|----------------------------------------------|----------------------|
-| Data Provenance Tracking                    | Provenance-as-response, model-card mandate   | Layer 1 + Layer 4    |
-| Contextual Signature Mapping                | Context engineering w/ user-visible knobs    | Layer 2              |
-| Chain of Evidence Generation                | Typed decisions + structured audit trail     | Layers 1, 3, 4       |
-| Explainability Anchoring                    | Trace/observe primitives surfaced to user    | Layers 2, 4          |
-| Human Validation Points                     | Evidence-aware feedback w/ runtime loop      | Layers 3, 4          |
+One authoritative home per artefact. Cross-repository references are links, never copies.
 
-## Repository layout
+## What lives in this repo
 
-```
-source-engineering/
-├── README.md                        -  this file
-├── ROADMAP.md                       -  phased plan, slice-by-slice
-├── MANIFESTO.md                     -  deprecated; superseded by docs/00-manifesto.md
-├── CONTRIBUTING.md                  -  how to engage with the work
-├── LICENSE                          -  Apache-2.0
-├── docs/
-│   ├── pillars/                     -  the five pillars, evolved
-│   │   ├── 01-data-provenance.md
-│   │   ├── 02-contextual-signature.md
-│   │   ├── 03-chain-of-evidence.md
-│   │   ├── 04-explainability-anchoring.md
-│   │   └── 05-human-validation.md
-│   └── architecture/
-│       └── four-layer-stack.md      -  the 2026 reference architecture
-├── framework/                       -  reference framework code (future slice)
-│   └── README.md                    -  currently a stub describing intent
-├── tools/                           -  reference tooling (future slice)
-│   └── README.md                    -  currently a stub describing intent
-└── .github/
-    └── README.md                    -  project-level governance notes
-```
-
-Pillar folders and `framework/`, `tools/` directories are populated incrementally. See [`ROADMAP.md`](ROADMAP.md) for the next slices.
-
-## Status
-
-This is a **scaffold slice**. The repository contains the discipline statement, the reframed architecture, pillar stubs, and the governance surface. No production code yet; that lands in subsequent slices per the roadmap.
+- `ROADMAP.md` -- the phased, slice-by-slice plan
+- `CHANGELOG.md` -- notable changes to the discipline
+- `CONTRIBUTING.md` -- how to engage with the work
+- `docs/` -- the discipline's working documents (manifesto, pillars, architecture). These are interim monorepo content; the planned destination is the corresponding aspect repo per the organisation map above
+- `framework/`, `tools/` -- reference framework code and tooling. Interim monorepo content
+- `.github/discipline-rule.md` -- the per-channel kanban discipline rule
 
 ## Kanban and channel discipline
 
 Work for this discipline is tracked on a dedicated Kanboard project: **http://192.168.50.160:7000/board/13** (project id 13, columns 52 Backlog / 53 Ready / 54 Work in progress / 55 Done). Every action on the discipline's Discord channel produces a kanban card, with column state matching the lifecycle, autonomously. The per-channel rule lives in `.github/discipline-rule.md`.
 
-The current 10 open cards are seeded against this repo.
+A public GitHub Project v2 mirrors the discipline's work for external contributors. See the project's project board on the discipline's project page once it is created in Phase 0.
+
+## Status
+
+This is the governance slice of the discipline. The discipline is published across the organisation of repositories listed above; the content in this repo's `docs/`, `framework/`, and `tools/` sub-directories is interim monorepo content that migrates to its authoritative home in subsequent phases.
 
 ## License
 
@@ -95,4 +81,4 @@ Apache-2.0. See [LICENSE](LICENSE).
 
 ## Acknowledgements
 
-The thesis and the surrounding work are authored by Emmanuel A. Otchere. The conceptual lineage draws on OODA (`Observe → Orient → Decide → Act`), Chain-of-Thought and its successors, knowledge-graph construction, and the broader explainable-AI community.
+The thesis and the surrounding work are authored by Emmanuel A. Otchere. The conceptual lineage draws on OODA (`Observe -> Orient -> Decide -> Act`), Chain-of-Thought and its successors, knowledge-graph construction, and the broader explainable-AI community.

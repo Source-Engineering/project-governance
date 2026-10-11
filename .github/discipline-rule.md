@@ -10,7 +10,7 @@ Every actionable item that arises on the Source Engineering Discord channel (par
 
 - **Guild:** 1496909480783249428
 - **Parent channel:** 1526858674822185010
-- **GitHub repo:** https://github.com/Source-Engineering/source-engineering
+- **GitHub repo:** https://github.com/Source-Engineering/project-governance
 - **Kanboard project:** http://192.168.50.160:7000/board/13 (project id 13, columns 52 Backlog / 53 Ready / 54 WIP / 55 Done)
 - **Skill:** source-engineering-kanban-discipline
 
@@ -37,7 +37,7 @@ Kanboard 4-column standard (Backlog/Ready/Work in progress/Done). Mapping to the
 Every card description carries:
 
 - Origin Discord thread id (e.g. 1558169004336742480) and message id where applicable
-- The repo path: https://github.com/Source-Engineering/source-engineering/<path>
+- The repo path: https://github.com/Source-Engineering/project-governance/<path>
 - Commit SHAs (7-char) for any commit the card references
 - Adjacent card refs: the umbrella card id for the workstream
 - The board URL: http://192.168.50.160:7000/board/13
