@@ -10,8 +10,8 @@ This epic owns the four-layer reference architecture: typed model, runtime valid
 
 ## Children
 
-- [ ] Task: Author `docs/framework/cots-schema.md` — Slice 1
-- [ ] Task: Author `docs/framework/layer-01-typed-model.md` — Slice 1
-- [ ] Task: Author `docs/framework/layer-02-runtime-validation.md` — Slice 1
-- [ ] Task: Author `docs/framework/layer-03-business-guardrails.md` — Slice 1
-- [ ] Task: Author `docs/framework/layer-04-audit-trail.md` — Slice 1
+- [ ] Task: Author `docs/framework/cots-schema.md` - Slice 1
+- [ ] Task: Author `docs/framework/layer-01-typed-model.md` - Slice 1
+- [ ] Task: Author `docs/framework/layer-02-runtime-validation.md` - Slice 1
+- [ ] Task: Author `docs/framework/layer-03-business-guardrails.md` - Slice 1
+- [ ] Task: Author `docs/framework/layer-04-audit-trail.md` - Slice 1

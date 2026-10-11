@@ -18,8 +18,8 @@ This epic tracks the evolution of each of the five pillars from the 2025 framing
 
 ## Children
 
-- [ ] Task: Finalize Pillar 1 (provenance) — Slice 1
-- [ ] Task: Finalize Pillar 2 (contextual) — Slice 1
-- [ ] Task: Finalize Pillar 3 (evidence) — Slice 1
-- [ ] Task: Finalize Pillar 4 (explainability) — Slice 1
-- [ ] Task: Finalize Pillar 5 (validation) — Slice 1
+- [ ] Task: Finalize Pillar 1 (provenance) - Slice 1
+- [ ] Task: Finalize Pillar 2 (contextual) - Slice 1
+- [ ] Task: Finalize Pillar 3 (evidence) - Slice 1
+- [ ] Task: Finalize Pillar 4 (explainability) - Slice 1
+- [ ] Task: Finalize Pillar 5 (validation) - Slice 1

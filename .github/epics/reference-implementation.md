@@ -11,8 +11,8 @@ This epic owns the first runnable artifact of the framework. The minimal viable 
 
 ## Children
 
-- [ ] Story: Pick language + typing discipline (candidates: Python+pydantic, TypeScript+zod) — Spike
-- [ ] Story: Define the canonical decision surface for Slice 2 — Slice 2
-- [ ] Story: Emit a v0.1 COTS from one decision call — Slice 2
-- [ ] Story: Test that the COTS reconstructs the decision — Slice 2
-- [ ] Story: Add a second provider adapter (LLM-independent core) — Slice 2+ stretch
+- [ ] Story: Pick language + typing discipline (candidates: Python+pydantic, TypeScript+zod) - Spike
+- [ ] Story: Define the canonical decision surface for Slice 2 - Slice 2
+- [ ] Story: Emit a v0.1 COTS from one decision call - Slice 2
+- [ ] Story: Test that the COTS reconstructs the decision - Slice 2
+- [ ] Story: Add a second provider adapter (LLM-independent core) - Slice 2+ stretch
