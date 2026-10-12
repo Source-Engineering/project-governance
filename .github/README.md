@@ -27,6 +27,4 @@ When the first CI gate is needed (Slice 2 + reference implementation), workflows
 
 ## Conventions
 
-- No en-dashes (U+2013) or em-dashes (U+2014) in GitHub artefacts; cardinal rule.
-- No triple-semicolons in prose.
 - Apache-2.0.
