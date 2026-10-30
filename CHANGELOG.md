@@ -21,3 +21,9 @@ All notable changes to Source Engineering are recorded here. The format follows 
 ### Changed
 
 - `ROADMAP.md` - Slices 0-2 marked shipped via the polyrepo rollout (ADR-0001); the Advancement Plan phases supersede slice numbering for work from v0.1 onward; Slice 0 stale repo references corrected to the polyrepo organisation map
+
+## [Unreleased] - Phase 0 hardening
+
+### Changed
+
+- `ROADMAP.md` - stale-path sweep complete: Slice 1 artefact paths corrected to their polyrepo homes (specifications, architecture layer contracts); Slice 2 language decision recorded (TypeScript); Slice 3 marked shipped as the 2026 legal-summarization case study, with Q3.2 traced to RFC-0002
