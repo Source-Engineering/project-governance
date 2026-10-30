@@ -29,12 +29,9 @@
 
 **Goal:** Land the framework as a written specification  -  the interfaces, the COTS schema, the layer responsibilities  -  without code yet.
 
-**Scope:**
-- `docs/framework/cots-schema.md`  -  the COTS JSON/YAML/TOML schema, version 0.1
-- `docs/framework/layer-01-typed-model.md`  -  typed question interface contract
-- `docs/framework/layer-02-runtime-validation.md`  -  runtime calibration API
-- `docs/framework/layer-03-business-guardrails.md`  -  guardrail DSL
-- `docs/framework/layer-04-audit-trail.md`  -  audit-trail persistence contract
+**Scope:** (artefacts landed in their polyrepo homes; monorepo `docs/framework/` paths are superseded)
+- COTS schema v0.1  -  `Source-Engineering/source-engineering-specifications/cots/README.md`
+- Layer contracts  -  `Source-Engineering/source-engineering-architecture/layer-contracts/layer-1-typed-model.md` through `layer-4-audit-trail.md`
 - Interface-first: every layer's inputs, outputs, and failure modes
 
 **Closes open question:** What does the COTS schema need to expose to be a usable contract?
@@ -43,7 +40,7 @@
 
 ## Slice 2  -  Reference Implementation (typed-model slice) (shipped)
 
-**Goal:** First runnable artifact. A minimal typed-model interface in a single language (TBD, likely Python with type hints + pydantic, or TypeScript with zod) that demonstrates COTS emission for a single decision.
+**Goal:** First runnable artifact. A minimal typed-model interface in TypeScript (zod-style typed decision-types) that demonstrates COTS emission for a single decision.
 
 **Scope:**
 - One canonical decision ("approve / reject / refer" with calibrated probabilities)
@@ -54,7 +51,7 @@
 
 ---
 
-## Slice 3  -  Validation Domain: Legal Document Summarization
+## Slice 3  -  Validation Domain: Legal Document Summarization (shipped)
 
 **Goal:** Apply the framework to the legal-document-summarization prototype named in the 2025 essay. Use the typed-model + audit-trail pair to evaluate where the hesitation factor still bites.
 
@@ -65,6 +62,8 @@
 - Publish findings as a Slice 3 report
 
 **Closes open question:** Does the framework reduce the hesitation factor in a domain where the cost of a confidently wrong decision is liability, not latency?
+
+**Status:** shipped as `Source-Engineering/source-engineering-case-studies/2026-legal-summarization/`. The study confirmed the headline hypothesis and surfaced open question Q3.2 (recursive evidence chains), now RFC-0002.
 
 ---
 
