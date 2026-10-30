@@ -1,6 +1,8 @@
 # Source Engineering  -  Roadmap
 
 > A phased, slice-by-slice plan. Each slice is shippable. Each slice closes one or more open questions.
+>
+> The discipline has completed the polyrepo rollout and seeded v0.1 content across the organisation. The forward plan from v0.1 to a robust, reputable, and complete system is captured in the Advancement Plan epic: [`.github/epics/advancement-plan.md`](.github/epics/advancement-plan.md). Slices 0 through 2 below have shipped as the v0.1 floor; the Advancement Plan phases supersede the slice numbering for work from here on.
 
 ## Phasing principle
 
@@ -8,22 +10,22 @@
 
 ---
 
-## Slice 0  -  Scaffold (current)
+## Slice 0  -  Scaffold (shipped)
 
 **Goal:** Establish the discipline on GitHub and Kanban. Land a working repo with manifesto, reframed architecture, pillar stubs, license, and contributing guide.
 
 **Done when:**
-- `Source-Engineering/source-engineering` is public and has the canonical artifacts (README, MANIFESTO, ROADMAP, four-layer-stack.md, pillar sub-folder stubs, LICENSE (Apache-2.0), CONTRIBUTING, .github/README.md)
-- The README links both source essays and is the canonical landing page for the discipline
-- The repo is linked to a dedicated Source Engineering Kanboard project via a project card
-- GitHub Project board exists with WBS epic issues (Pillars / Architecture / Reference Implementation / Validation Domains)
+- The discipline's canonical artifacts (README, MANIFESTO, ROADMAP, four-layer-stack.md, pillar sub-folder stubs, LICENSE (Apache-2.0), CONTRIBUTING, .github/README.md) are public under the `Source-Engineering` organisation, one authoritative home per artefact per the organisation map in [README.md](README.md)
+- The org profile README links both source essays and is the canonical landing page for the discipline
+- The work is linked to a dedicated Source Engineering Kanboard project via a project card
+- GitHub Project board exists with WBS epic issues (Pillars / Architecture / Reference Implementation / Validation Domains / Advancement Plan)
 - The slice lives on `main`
 
-**Status:** in flight.
+**Status:** shipped via the polyrepo rollout (ADR-0001).
 
 ---
 
-## Slice 1  -  Framework Spec
+## Slice 1  -  Framework Spec (shipped)
 
 **Goal:** Land the framework as a written specification  -  the interfaces, the COTS schema, the layer responsibilities  -  without code yet.
 
@@ -39,7 +41,7 @@
 
 ---
 
-## Slice 2  -  Reference Implementation (typed-model slice)
+## Slice 2  -  Reference Implementation (typed-model slice) (shipped)
 
 **Goal:** First runnable artifact. A minimal typed-model interface in a single language (TBD, likely Python with type hints + pydantic, or TypeScript with zod) that demonstrates COTS emission for a single decision.
 

@@ -11,3 +11,13 @@ All notable changes to Source Engineering are recorded here. The format follows 
 - `docs/pillars/01-data-provenance.md` through `05-human-validation.md`  -  pillar evolution and stack placement notes
 - `framework/README.md`, `tools/README.md`  -  placeholder directories for future slices
 - `.gitignore`  -  standard ignores + secrets guard (`.env`, `*.pem`, `*.key`, `*id_rsa*`)
+
+## [Advancement Plan] - 2026 Phase Planning
+
+### Added
+
+- `.github/epics/advancement-plan.md` - the WBS epic turning the discipline from a working Layer 1 demo into a robust, reputable, and complete system: Phase 0 hardening (CI, releases, compatibility matrix), Phase 1 Layer 2 floor (RFC-0001), Phase 2 semantic conformance, Phase 3 Layer 3 guardrails DSL, Phase 4 Layer 4 audit trail, Phase 5 evidence and adoption
+
+### Changed
+
+- `ROADMAP.md` - Slices 0-2 marked shipped via the polyrepo rollout (ADR-0001); the Advancement Plan phases supersede slice numbering for work from v0.1 onward; Slice 0 stale repo references corrected to the polyrepo organisation map
