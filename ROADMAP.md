@@ -93,7 +93,7 @@
 
 ---
 
-## Slice 6  -  Cross-Domain Validation
+## Slice 6  -  Cross-Domain Validation (shipped 2026-11-02: 2026-finance-transaction-routing case study + cross-domain variance doc)
 
 **Goal:** Port the framework to a second high-stakes domain (finance or medical triage candidate) and validate that the discipline's claims hold cross-domain.
 
