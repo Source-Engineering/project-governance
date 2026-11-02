@@ -77,10 +77,11 @@ The conformance suite currently checks presence, not integrity. A structurally p
 
 ## Phase 5  -  Evidence and Adoption (ongoing, starts once Phase 1 lands)
 
-- [ ] Second-domain case study: finance transaction-routing (decision-type already registered; lowest-effort cross-domain win, closes Slice 6's open question)
+- [x] Second-domain case study: finance transaction-routing (shipped 2026-11-02 as `2026-finance-transaction-routing`; closed Slice 6's open question)
+- [ ] Research protocol per domain: standardized hesitation-factor measurement (protocol pre-registered at `protocols/transaction-routing-evaluation.md`; per-domain runs still open)
 - [ ] Research protocol per domain: standardized hesitation-factor measurement so results are comparable across domains
 - [ ] Adopter quickstart: `npx`-runnable path from zero to a validated COTS in under 15 minutes
-- [ ] COTS Explorer: static web UI on top of `se-trace visualize` (the demo-able surface)
+- [x] COTS Explorer: static web UI on top of `se-trace visualize` (shipped 2026-11-02 as `se-trace explore`, tools#8)
 - [ ] Publisher-side dogfooding: one recorded, reproducible example of a COTS produced from a real LLM call via the Anthropic adapter, validated by the suite
 - [ ] Cross-provider adapters: OpenAI and Gemini grounding APIs
 - [ ] Evidence-anchored reasoning benchmark suite
